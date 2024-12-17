@@ -1,0 +1,295 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
+body {
+    margin: 0px;
+    font-family: 'Open Sans';
+}
+
+header {
+    background: linear-gradient(45deg, #1e8cae, #335E94);
+    padding: 16px 0px;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+
+    z-index: 3;
+    /*sa nu se ridice elementele deasupra lui header*/
+}
+
+a {
+    color: blue;
+    text-decoration: none;
+}
+
+p {
+    line-height: 145%; /*distanta dintre rindurile textului*/
+}
+
+main {
+    min-height: 100dvh;
+    padding-top: 70px;
+    padding-bottom: 30px;
+
+}
+
+footer {
+    color: white;
+    background: linear-gradient(45deg, #1e8cae, #335E94);
+    padding: 15px;
+    text-align: center;
+}
+
+#logo-link {
+    height: 50px;
+    filter: sepia(100%);
+    /*se schimba culoarea logoului, cu invert se inverseaza culoarea din negru de exemplu in alb*/
+}
+
+nav {
+    display: flex;
+    align-items: center;
+}
+
+nav a {
+    color: white;
+    font-size: 1.25rem;
+    text-decoration: none;
+    margin-right: 25px;
+    text-transform: uppercase;
+    font-family: Raleway;
+    font-weight: 600;
+}
+
+nav a:hover {
+    color: rgb(218, 207, 249);
+    /*pentru culoare la butoane*/
+}
+
+nav,
+.container {
+    max-width: 1170px;
+    margin: 0 auto;
+    padding: 0px 20px;
+}
+
+.container {
+    padding-bottom: 20px;
+}
+
+.video-div {
+    height: 75dvh;
+    min-height: 400px;
+    /* daca inaltimea este de 60%, sa nu fie mai mic decit aceste dimensiuni anume 400px*/
+    background-color: #12356085;
+}
+
+.section-div {
+    height: 40dvh;
+    min-height: 400px;
+    background-color: #39659bce;
+}
+
+#index-video {
+    /* diez se pune pentru sectiune*/
+    width: 100%;
+    height: inherit;
+    min-height: inherit;
+    object-fit: cover;
+    position: absolute;
+    z-index: -1;
+}
+
+.index-info {
+    height: inherit;
+    /*mosteneste de la parinte inaltimea*/
+    min-height: inherit;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    /*ca h1 si h2 sa nu fie intr-un rind, dar in diferite coloane*/
+    justify-content: center;
+    /*pentru alinierea coloanelor la mijloc*/
+}
+
+.index-info h1 {
+    font-size: 2rem;
+    text-transform: uppercase;
+    margin-bottom: 0px;
+}
+
+.btn-inscriere {
+    margin-top: 30px;
+    color: white;
+    text-decoration: none;
+    border: 2px solid white;
+    background-color: #036e28;
+    max-width: fit-content;
+    padding: 10px;
+    border-radius: 5px;
+    transition: all 0.5s;
+}
+
+.btn-inscriere:hover {
+    /*pentru schimbarea culorii butonului la punerea mouse-lui pe buton*/
+    color: #036e28;
+    background-color: white;
+    border-color: #036e28;
+}
+
+section>h1 {
+    /*copil*/
+    font-size: 2rem;
+    text-align: center;
+}
+
+.carduri {
+    display: flex;
+    gap: 20px;
+    /*spatiu-distanta dintre carduri*/
+}
+
+.card {
+    /*border: 1px solid gray; (border se șterge dacă punem box-shadow) */
+    width: 33.33%;
+    border-radius: 5px;
+    padding: 15px;
+    margin-bottom: 15px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+}
+
+.card:hover {
+    box-shadow: #12356085 0px 3px 6px;
+    /*cind dai cu mousse asupra cardului apare culoarea chenarului albastru*/
+}
+
+.card:hover>img {
+    /* se citeste imaginile din card in starea hover*/
+    transform: scale(1.10);
+}
+
+.card>h3 {
+    text-align: center;
+}
+
+.card>img {
+    height: 90px;
+    margin: 10px auto;
+    display: block;
+
+    transition: 0.3s all;
+}
+
+#inscrieri-section {
+    background: url("../images/inscrieri-images.jpg");
+    background-position: 80% 30%;
+}
+
+.inscriere-info {
+    display: flex;
+    gap: 15px;
+}
+
+.card-inscriere {
+    width: 50%;
+    padding: 0px 20px 20px 20px;
+    border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+}
+
+.profesor {
+    overflow: auto; 
+}
+
+.profesor img {
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    float: left;
+    margin-right: 15px;
+    object-fit: cover; /*taie din imagine ca sa arate mai bine*/
+}
+
+.input-form {
+    width: 100%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-family: 'Open Sans';
+    font-size: 16px; /*fontul din interiorul casutei*/
+    padding: 5px 10px; 
+    box-sizing: border-box;
+    border-radius: 5px;
+    border: 1px solid #0a0a96;
+    border-color: #0a0a96 !important;
+    
+}
+
+.input-form:focus {
+    outline: 2px solid blue; /*cind activam casuta se face borderul mai gros*/
+}
+
+.select-form {
+    font-family: 'Open Sans';
+    font-size: 16px;
+    margin-top: 5px;
+}
+
+#transmite {
+    display: block;
+    margin-top: 20px;
+    font-size: 16px;
+    font-family: 'Open Sans';
+    padding: 7px;
+    border-radius: 5px;
+    border: none;
+    background-color: #0a0a96;
+    color: white;
+    cursor: pointer; /* cursorul interactioneaza cu butonul*/
+}
+
+#materiale-section {
+    background: url("../images/materiale.jpg");
+    background-size: cover;
+    background-position: 0% 80%;
+}
+
+.materiale {
+    display: flex; /*aranjeaza imaginile intr-un rind*/
+    gap: 15px; /*distanta dintre imagini*/
+    justify-content: center;
+    flex-wrap: wrap; /*daca nu incap intr-un rind, sa le treaca din rind nou*/
+}
+
+.materiale a {
+    width: 200px;
+    padding: 30px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    border-radius: 15px;
+    text-align: center;
+    color: #3676c3;
+    transition: 0.3s all;
+}
+
+.materiale a:hover {
+    transform: scale(1.05);
+    box-shadow: #3378cd97  0px 5px 15px 0px;
+}
+
+.materiale img {
+    height: 140px;
+}
+@media (max-width: 968px) {
+
+    html {
+        font-size: 15px;
+    }
+
+    .carduri, .inscrieri-info {
+        flex-wrap: wrap;
+        /*daca elementele nu incap intr-un rind, le trece in alt rind*/
+    }
+
+    .card, .card-inscrieri {
+        width: 100%;
+    }
+}
